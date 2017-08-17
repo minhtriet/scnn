@@ -1,0 +1,5 @@
+E0817 17:44:13.239248 31032 extract_image_features.cpp:71] 0
+E0817 17:44:13.239470 31032 extract_image_features.cpp:73] Using GPU
+E0817 17:44:13.239476 31032 extract_image_features.cpp:74] Using Device_id=0
+E0817 17:44:13.628840 31032 extract_image_features.cpp:77] Using CPU
+E0817 17:44:13.628872 31032 extract_image_features.cpp:83] xfeat_resnet18_r2.prototxt

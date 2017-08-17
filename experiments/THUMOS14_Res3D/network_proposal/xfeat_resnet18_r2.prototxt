@@ -13,7 +13,7 @@ layer {
     mirror: false
   }
   video_data_param {
-    source: "list_test_uniform16_proposal.lst"
+    source: "test_fb_modified.txt"
     root_folder: ""
     new_length: 16
     sampling_rate: 1
