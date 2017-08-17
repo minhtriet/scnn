@@ -51,3 +51,5 @@ models/*
 *.caffemodel
 
 lib/
+*.mp4
+*.jpg
