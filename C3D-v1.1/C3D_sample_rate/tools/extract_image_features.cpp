@@ -68,22 +68,22 @@ int feature_extraction_pipeline(int argc, char** argv) {
   uint batch_size = atoi(argv[4]);
   uint num_mini_batches = atoi(argv[5]);
   char* fn_feat = argv[6];
-
+  LOG(ERROR) << argv[3];
   if (device_id >= 0) {
-    LOG(INFO)<< "Using GPU";
-    LOG(INFO) << "Using Device_id=" << device_id;
+    LOG(ERROR)<< "Using GPU";
+    LOG(ERROR) << "Using Device_id=" << device_id;
     Caffe::SetDevice(device_id);
     Caffe::set_mode(Caffe::GPU);
-  } else {
-    LOG(INFO) << "Using CPU";
-    Caffe::set_mode(Caffe::CPU);
+    //LOG(ERROR) << "Using CPU";
+    //Caffe::set_mode(Caffe::CPU);
   }
 
   std::string pretrained_binary_proto(pretrained_model);
-
   std::string feature_extraction_proto(net_proto);
-  boost::shared_ptr<Net<Dtype> > feature_extraction_net(
-      new Net<Dtype>(feature_extraction_proto, caffe::TEST));
+  LOG(ERROR) << feature_extraction_proto;
+  //boost::shared_ptr<Net<Dtype> > feature_extraction_net(new Net<Dtype>(feature_extraction_proto, caffe::TEST));
+  boost::shared_ptr<Net<Dtype> > feature_extraction_net(new Net<Dtype>(feature_extraction_proto, caffe::TEST));
+  LOG(ERROR) << "here";
   feature_extraction_net->CopyTrainedLayersFrom(pretrained_binary_proto);
 
   for (int i=7; i<argc; i++){
@@ -92,7 +92,7 @@ int feature_extraction_pipeline(int argc, char** argv) {
       << " in the network " << string(net_proto);
   }
 
-
+  LOG(ERROR) << "here 3";
   LOG(INFO)<< "Extracting features for " << num_mini_batches << " batches";
   std::ifstream infile(fn_feat);
   string feat_prefix;

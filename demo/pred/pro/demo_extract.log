@@ -1,0 +1,10 @@
+../C3D-v1.0/C3D_sample_rate/build/tools/extract_image_features.bin: /usr/local/MATLAB/R2016a/bin/glnxa64/libtiff.so.5: no version information available (required by /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4)
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+E0817 13:26:00.338543 22569 extract_image_features.cpp:55] Using GPU #0
+I0817 13:26:00.339777 22569 net.cpp:65] Memory required for Data0
+I0817 13:26:00.339805 22569 net.cpp:76] Creating Layer data
+I0817 13:26:00.339810 22569 net.cpp:112] data -> data
+I0817 13:26:00.339818 22569 net.cpp:112] data -> label
+I0817 13:26:00.339829 22569 video_data_layer.cpp:283] Opening file pred/pro/demo_list_test_uniform16_proposal.lst
+I0817 13:26:00.339851 22569 video_data_layer.cpp:309] failed to read chunk list
+I0817 13:26:00.339856 22569 video_data_layer.cpp:318] A total of 0 video chunks.
